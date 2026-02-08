@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플라톤마케팅 메타 광고 소재 20종</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #1a1a2e;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            color: #888;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 32px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .ad-wrapper {
+            background: #16213e;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .ad-label {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ad-label span {
+            background: #2563eb;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .ad-container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        /* 다운로드 버튼 */
+        .download-btn {
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+        }
+
+        /* ========== 광고 소재 공통 스타일 ========== */
+        .ad {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ad::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .ad > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ad .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .ad .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: white;
+            color: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .ad .logo-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .ad .headline {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .ad .subline {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .ad .cta-btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ad .stat-box {
+            padding: 16px 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .ad .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .ad .stat-label {
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* ========== 광고 1: 성과 강조 - 신환 5배 ========== */
+        .ad-01 {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .ad-01 .stat-box {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .ad-01 .stat-number {
+            color: #fbbf24;
+        }
+
+        .ad-01 .cta-btn {
+            background: white;
+            color: #2563eb;
+        }
+
+        /* ========== 광고 2: 문제 제기 ========== */
+        .ad-02 {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+        }
+
+        .ad-02 .headline {
+            font-size: 28px;
+        }
+
+        .ad-02 .highlight {
+            color: #ef4444;
+        }
+
+        .ad-02 .subline {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .ad-02 .cta-btn {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            color: white;
+        }
+
+        /* ========== 광고 3: 매출 상승 ========== */
+        .ad-03 {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+        }
+
+        .ad-03 .before-after {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .ad-03 .ba-box {
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .ad-03 .before {
+            background: rgba(0,0,0,0.2);
+        }
+
+        .ad-03 .after {
+            background: white;
+            color: #059669;
+        }
+
+        .ad-03 .ba-label {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .ad-03 .ba-value {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .ad-03 .arrow {
+            font-size: 24px;
+        }
+
+        .ad-03 .cta-btn {
+            background: white;
+            color: #059669;
+        }
+
+        /* ========== 광고 4: 무료 진단 ========== */
+        .ad-04 {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+        }
+
+        .ad-04 .badge {
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .ad-04 .cta-btn {
+            background: white;
+            color: #7c3aed;
+        }
+
+        /* ========== 광고 5: 전담팀 강조 ========== */
+        .ad-05 {
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+            color: white;
+        }
+
+        .ad-05 .team-icons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .ad-05 .team-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .ad-05 .cta-btn {
+            background: white;
+            color: #0891b2;
+        }
+
+        /* ========== 광고 6: 후기 ========== */
+        .ad-06 {
+            background: white;
+            color: #0f172a;
+        }
+
+        .ad-06 .quote {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        .ad-06 .quote::before {
+            content: '"';
+            color: #2563eb;
+            font-size: 48px;
+            line-height: 0;
+            vertical-align: -16px;
+            margin-right: 4px;
+        }
+
+        .ad-06 .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .ad-06 .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .ad-06 .author-info {
+            text-align: left;
+        }
+
+        .ad-06 .author-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .ad-06 .author-title {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .ad-06 .cta-btn {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            color: white;
+        }
+
+        /* ========== 광고 7: 비교 ========== */
+        .ad-07 {
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 32px;
+        }
+
+        .ad-07 .comparison {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .ad-07 .comp-box {
+            flex: 1;
+            padding: 20px 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .ad-07 .comp-bad {
+            background: #fee2e2;
+            border: 2px solid #fecaca;
+        }
+
+        .ad-07 .comp-good {
+            background: #dbeafe;
+            border: 2px solid #2563eb;
+        }
+
+        .ad-07 .comp-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .ad-07 .comp-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .ad-07 .comp-desc {
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        .ad-07 .cta-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* ========== 광고 8: 긴급성 ========== */
+        .ad-08 {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+        }
+
+        .ad-08 .urgent-badge {
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .ad-08 .headline {
+            font-size: 28px;
+        }
+
+        .ad-08 .cta-btn {
+            background: white;
+            color: #dc2626;
+        }
+
+        /* ========== 광고 9: 체크리스트 ========== */
+        .ad-09 {
+            background: linear-gradient(180deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .ad-09 .headline {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .ad-09 .checklist {
+            margin-bottom: 24px;
+        }
+
+        .ad-09 .check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .ad-09 .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .ad-09 .cta-btn {
+            background: white;
+            color: #1e40af;
+        }
+
+        /* ========== 광고 10: 숫자 강조 ========== */
+        .ad-10 {
+            background: #0f172a;
+            color: white;
+        }
+
+        .ad-10 .stats-row {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .ad-10 .stat-item {
+            text-align: center;
+        }
+
+        .ad-10 .stat-num {
+            font-size: 36px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ad-10 .stat-txt {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .ad-10 .cta-btn {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            color: white;
+        }
+
+        /* ========== 광고 11: 병원 특화 ========== */
+        .ad-11 {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            color: white;
+        }
+
+        .ad-11 .hospital-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .ad-11 .cta-btn {
+            background: white;
+            color: #0d9488;
+        }
+
+        /* ========== 광고 12: 대표 미팅 ========== */
+        .ad-12 {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+        }
+
+        .ad-12 .meeting-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #0f172a;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .ad-12 .headline {
+            font-size: 26px;
+        }
+
+        .ad-12 .subline {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .ad-12 .cta-btn {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            color: white;
+        }
+
+        /* ========== 광고 13: SEO 강조 ========== */
+        .ad-13 {
+            background: white;
+            color: #0f172a;
+        }
+
+        .ad-13 .search-box {
+            background: #f1f5f9;
+            border-radius: 50px;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .ad-13 .search-box i {
+            color: #64748b;
+        }
+
+        .ad-13 .search-text {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .ad-13 .rank-badge {
+            background: #10b981;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .ad-13 .cta-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* ========== 광고 14: 포트폴리오 ========== */
+        .ad-14 {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 32px;
+        }
+
+        .ad-14 .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .ad-14 .portfolio-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+
+        .ad-14 .portfolio-item i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .ad-14 .portfolio-item span {
+            font-size: 12px;
+        }
+
+        .ad-14 .cta-btn {
+            background: white;
+            color: #4f46e5;
+        }
+
+        /* ========== 광고 15: 질문형 ========== */
+        .ad-15 {
+            background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+            color: #0f172a;
+        }
+
+        .ad-15 .question-mark {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .ad-15 .headline {
+            font-size: 26px;
+            color: #92400e;
+        }
+
+        .ad-15 .subline {
+            color: #a16207;
+        }
+
+        .ad-15 .cta-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* ========== 광고 16: 94% 유지율 ========== */
+        .ad-16 {
+            background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+            color: white;
+        }
+
+        .ad-16 .circle-stat {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: conic-gradient(#fbbf24 0% 94%, rgba(255,255,255,0.2) 94% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .ad-16 .circle-inner {
+            width: 110px;
+            height: 110px;
+            background: #0284c7;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-16 .circle-num {
+            font-size: 36px;
+            font-weight: 900;
+        }
+
+        .ad-16 .circle-label {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .ad-16 .cta-btn {
+            background: white;
+            color: #0369a1;
+        }
+
+        /* ========== 광고 17: 전환율 ========== */
+        .ad-17 {
+            background: linear-gradient(135deg, #be185d 0%, #ec4899 100%);
+            color: white;
+        }
+
+        .ad-17 .funnel {
+            margin-bottom: 20px;
+        }
+
+        .ad-17 .funnel-step {
+            padding: 10px 20px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .ad-17 .f1 { background: rgba(255,255,255,0.15); width: 200px; }
+        .ad-17 .f2 { background: rgba(255,255,255,0.25); width: 160px; }
+        .ad-17 .f3 { background: rgba(255,255,255,0.35); width: 120px; }
+        .ad-17 .f4 { background: #fbbf24; color: #0f172a; width: 100px; }
+
+        .ad-17 .cta-btn {
+            background: white;
+            color: #be185d;
+        }
+
+        /* ========== 광고 18: 브랜딩 ========== */
+        .ad-18 {
+            background: #0f172a;
+            color: white;
+        }
+
+        .ad-18 .brand-visual {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .ad-18 .brand-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .ad-18 .bc1 { background: #2563eb; }
+        .ad-18 .bc2 { background: #06b6d4; }
+        .ad-18 .bc3 { background: #10b981; }
+        .ad-18 .bc4 { background: #f59e0b; }
+
+        .ad-18 .headline {
+            font-size: 26px;
+        }
+
+        .ad-18 .subline {
+            color: #94a3b8;
+        }
+
+        .ad-18 .cta-btn {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            color: white;
+        }
+
+        /* ========== 광고 19: 의료광고법 ========== */
+        .ad-19 {
+            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            color: white;
+        }
+
+        .ad-19 .shield-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .ad-19 .headline {
+            font-size: 24px;
+        }
+
+        .ad-19 .guarantee {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .ad-19 .cta-btn {
+            background: white;
+            color: #065f46;
+        }
+
+        /* ========== 광고 20: 최종 CTA ========== */
+        .ad-20 {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #06b6d4 100%);
+            color: white;
+        }
+
+        .ad-20 .final-badge {
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .ad-20 .headline {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .ad-20 .benefits {
+            margin-bottom: 20px;
+        }
+
+        .ad-20 .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .ad-20 .benefit-item i {
+            color: #10b981;
+        }
+
+        .ad-20 .cta-btn {
+            background: white;
+            color: #1e3a8a;
+            font-size: 18px;
+            padding: 16px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>플라톤마케팅 메타 광고 소재 20종</h1>
+    <p class="subtitle">1080x1080 정사각형 | 각 소재를 캡처하거나 이미지로 저장하여 사용하세요</p>
+
+    <div class="ads-grid">
+        <!-- 광고 01: 신환 5배 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>성과 강조</span>
+                광고 01 - 신환 5배
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-01">
+                    <div class="logo">
+                        <div class="logo-icon">P</div>
+                        <div class="logo-text">플라톤마케팅</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">5배</div>
+                        <div class="stat-label">신환 증가</div>
+                    </div>
+                    <div class="headline">홈페이지 하나 바꿨을 뿐인데</div>
+                    <div class="subline">8개월 만에 강남 병원<br>120평 확장 이전</div>
+                    <div class="cta-btn">무료 진단받기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 02: 문제 제기 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>문제 제기</span>
+                광고 02 - 왜 안될까
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-02">
+                    <div class="logo">
+                        <div class="logo-icon">P</div>
+                        <div class="logo-text">플라톤마케팅</div>
+                    </div>
+                    <div class="headline">
+                        홈페이지 있는데<br>
+                        <span class="highlight">왜 환자가 안 올까요?</span>
+                    </div>
+                    <div class="subline">
+                        예쁘기만 한 홈페이지는<br>
+                        매출에 아무 도움이 안 됩니다
+                    </div>
+                    <div class="cta-btn">원인 진단받기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 03: 매출 상승 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>성과 강조</span>
+                광고 03 - 매출 상승
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-03">
+                    <div class="logo">
+                        <div class="logo-icon">P</div>
+                        <div class="logo-text">플라톤마케팅</div>
+                    </div>
+                    <div class="headline">월 매출이<br>이렇게 바뀝니다</div>
+                    <div class="before-after">
+                        <div class="ba-box before">
+                            <div class="ba-label">BEFORE</div>
+                            <div class="ba-value">6천만</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="ba-box after">
+                            <div class="ba-label">AFTER</div>
+                            <div class="ba-value">1억4천</div>
+                        </div>
+                    </div>
+                    <div class="cta-btn">성공 비결 보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 04: 무료 진단 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>혜택 제공</span>
+                광고 04 - 무료 진단
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-04">
+                    <div class="badge">100% 무료</div>
+                    <div class="headline">홈페이지<br>무료 진단</div>
+                    <div class="subline">
+                        현재 홈페이지의 문제점과<br>
+                        개선 방향을 알려드립니다
+                    </div>
+                    <div class="cta-btn">무료 신청하기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 05: 전담팀 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>차별점</span>
+                광고 05 - 전담팀
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-05">
+                    <div class="team-icons">
+                        <div class="team-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="team-icon"><i class="fas fa-palette"></i></div>
+                        <div class="team-icon"><i class="fas fa-pen"></i></div>
+                        <div class="team-icon"><i class="fas fa-chart-bar"></i></div>
+                    </div>
+                    <div class="headline">5명의 전담팀이<br>붙습니다</div>
+                    <div class="subline">
+                        전략기획자, 디자이너, 카피라이터<br>
+                        분석가까지 병원 전담 배정
+                    </div>
+                    <div class="cta-btn">팀 구성 보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 06: 후기 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>사회적 증거</span>
+                광고 06 - 원장님 후기
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-06">
+                    <div class="quote">이전엔 광고비만 쓰고 환자는 없었어요. 플라톤은 다르더군요.</div>
+                    <div class="author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <div class="author-name">K 원장님</div>
+                            <div class="author-title">강남 피부과 | 매출 2배 상승</div>
+                        </div>
+                    </div>
+                    <div class="cta-btn">성공 사례 더보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 07: 비교 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>비교</span>
+                광고 07 - 일반 vs 플라톤
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-07">
+                    <div class="headline" style="font-size: 22px; margin-bottom: 20px;">같은 홈페이지, 다른 결과</div>
+                    <div class="comparison">
+                        <div class="comp-box comp-bad">
+                            <div class="comp-icon">😞</div>
+                            <div class="comp-title">일반 제작</div>
+                            <div class="comp-desc">예쁘기만 함<br>전환율 0.3%<br>환자 안 옴</div>
+                        </div>
+                        <div class="comp-box comp-good">
+                            <div class="comp-icon">🚀</div>
+                            <div class="comp-title">플라톤</div>
+                            <div class="comp-desc">전환 설계<br>신환 5배<br>매출 상승</div>
+                        </div>
+                    </div>
+                    <div class="cta-btn">차이점 알아보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 08: 긴급성 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>긴급성</span>
+                광고 08 - 한정 모집
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-08">
+                    <div class="urgent-badge">⚡ 1월 한정 3곳</div>
+                    <div class="headline">무료 홈페이지<br>진단 이벤트</div>
+                    <div class="subline">
+                        선착순 마감 예정<br>
+                        지금 바로 신청하세요
+                    </div>
+                    <div class="cta-btn">바로 신청하기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 09: 체크리스트 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>체크리스트</span>
+                광고 09 - 점검 항목
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-09">
+                    <div class="headline">우리 병원 홈페이지<br>괜찮은 걸까?</div>
+                    <div class="checklist">
+                        <div class="check-item">
+                            <div class="check-icon"><i class="fas fa-check"></i></div>
+                            <span>모바일에서 잘 보이나요?</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon"><i class="fas fa-check"></i></div>
+                            <span>예약 버튼이 눈에 띄나요?</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon"><i class="fas fa-check"></i></div>
+                            <span>검색에 잘 노출되나요?</span>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon"><i class="fas fa-check"></i></div>
+                            <span>브랜드가 명확한가요?</span>
+                        </div>
+                    </div>
+                    <div class="cta-btn">무료 점검받기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 10: 숫자 강조 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>실적</span>
+                광고 10 - 핵심 숫자
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-10">
+                    <div class="logo">
+                        <div class="logo-icon">P</div>
+                        <div class="logo-text">플라톤마케팅</div>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-num">170+</div>
+                            <div class="stat-txt">제작 병원</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">386%</div>
+                            <div class="stat-txt">신환 증가</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">94%</div>
+                            <div class="stat-txt">재계약률</div>
+                        </div>
+                    </div>
+                    <div class="headline" style="font-size: 24px;">숫자가 증명합니다</div>
+                    <div class="cta-btn">성과 확인하기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 11: 병원 특화 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>전문성</span>
+                광고 11 - 병원 전문
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-11">
+                    <div class="hospital-icon"><i class="fas fa-hospital"></i></div>
+                    <div class="headline">병의원만<br>4년째</div>
+                    <div class="subline">
+                        치과, 한의원, 피부과, 산부인과...<br>
+                        170개 병원의 노하우가 다릅니다
+                    </div>
+                    <div class="cta-btn">포트폴리오 보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 12: 대표 미팅 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>차별점</span>
+                광고 12 - 대표 직접
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-12">
+                    <div class="meeting-badge">👔 대표가 직접</div>
+                    <div class="headline">매월 원장님과<br>1:1 미팅합니다</div>
+                    <div class="subline">
+                        담당자 없음? 연락 안 됨?<br>
+                        플라톤은 대표가 책임집니다
+                    </div>
+                    <div class="cta-btn">상담 신청하기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 13: SEO -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>SEO</span>
+                광고 13 - 검색 노출
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-13">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <span class="search-text">강남 피부과 추천</span>
+                    </div>
+                    <div class="rank-badge">✓ 1페이지 노출</div>
+                    <div class="headline" style="font-size: 26px;">검색해도 안 나오는<br>홈페이지?</div>
+                    <div class="subline" style="color: #64748b;">SEO 최적화로<br>검색 상위노출을 만듭니다</div>
+                    <div class="cta-btn">SEO 진단받기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 14: 포트폴리오 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>포트폴리오</span>
+                광고 14 - 다양한 분야
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-14">
+                    <div class="headline" style="font-size: 24px; margin-bottom: 16px;">모든 병원,<br>맞춤 제작</div>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <i class="fas fa-tooth"></i>
+                            <span>치과</span>
+                        </div>
+                        <div class="portfolio-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>한의원</span>
+                        </div>
+                        <div class="portfolio-item">
+                            <i class="fas fa-spa"></i>
+                            <span>피부과</span>
+                        </div>
+                        <div class="portfolio-item">
+                            <i class="fas fa-heart"></i>
+                            <span>산부인과</span>
+                        </div>
+                    </div>
+                    <div class="cta-btn">전체 보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 15: 질문형 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>질문형</span>
+                광고 15 - 고민 공감
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-15">
+                    <div class="question-mark">🤔</div>
+                    <div class="headline">마케팅 회사만<br>6번째 바꾸셨나요?</div>
+                    <div class="subline">
+                        94%가 장기계약 유지<br>
+                        이유가 있습니다
+                    </div>
+                    <div class="cta-btn">이유 알아보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 16: 94% 유지율 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>신뢰</span>
+                광고 16 - 94% 유지율
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-16">
+                    <div class="circle-stat">
+                        <div class="circle-inner">
+                            <div class="circle-num">94%</div>
+                            <div class="circle-label">장기계약</div>
+                        </div>
+                    </div>
+                    <div class="headline" style="font-size: 24px;">한번 맡기면<br>계속 맡기는 이유</div>
+                    <div class="subline">성과가 나오니까요</div>
+                    <div class="cta-btn">성과 확인하기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 17: 전환율 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>퍼널</span>
+                광고 17 - 전환 설계
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-17">
+                    <div class="headline" style="font-size: 24px;">예쁜 홈페이지 vs<br>예약되는 홈페이지</div>
+                    <div class="funnel">
+                        <div class="funnel-step f1">검색 유입</div>
+                        <div class="funnel-step f2">정보 탐색</div>
+                        <div class="funnel-step f3">신뢰 형성</div>
+                        <div class="funnel-step f4">예약!</div>
+                    </div>
+                    <div class="subline" style="margin-bottom: 16px;">전환 퍼널을 설계합니다</div>
+                    <div class="cta-btn">자세히 보기 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 18: 브랜딩 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>브랜딩</span>
+                광고 18 - 브랜드 설계
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-18">
+                    <div class="brand-visual">
+                        <div class="brand-color bc1"></div>
+                        <div class="brand-color bc2"></div>
+                        <div class="brand-color bc3"></div>
+                        <div class="brand-color bc4"></div>
+                    </div>
+                    <div class="headline">브랜드가 없으면<br>가격으로 경쟁합니다</div>
+                    <div class="subline">
+                        병원의 진료 철학을<br>
+                        브랜드로 만들어드립니다
+                    </div>
+                    <div class="cta-btn">브랜딩 상담 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 19: 의료광고법 -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>안전</span>
+                광고 19 - 의료광고법
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-19">
+                    <div class="shield-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="headline">의료광고법<br>걱정 마세요</div>
+                    <div class="guarantee">✓ 4년간 법적 문제 0건</div>
+                    <div class="subline">
+                        자체 필터링 시스템으로<br>
+                        안전하게 운영합니다
+                    </div>
+                    <div class="cta-btn">안전하게 시작 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 20: 최종 CTA -->
+        <div class="ad-wrapper">
+            <div class="ad-label">
+                <span>CTA</span>
+                광고 20 - 최종 전환
+            </div>
+            <div class="ad-container">
+                <div class="ad ad-20">
+                    <div class="final-badge">병원 홈페이지 전문</div>
+                    <div class="headline">지금 무료로<br>진단받으세요</div>
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>현재 홈페이지 분석</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>경쟁 병원 비교</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>맞춤 개선안 제안</span>
+                        </div>
+                    </div>
+                    <div class="cta-btn">무료 상담 신청 <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 소재 다운로드 기능 (html2canvas 필요 시 추가)
+        console.log('메타 광고 소재 20종이 준비되었습니다.');
+        console.log('각 소재를 스크린샷하거나 개발자 도구를 통해 이미지로 저장하세요.');
+    </script>
+</body>
+</html>
