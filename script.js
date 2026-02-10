@@ -1,5 +1,5 @@
 /**
- * 플라톤마케팅 홈페이지 제작 랜딩페이지
+ * 디자인피엘티 돈 되는 랜딩페이지 전문
  * Premium Landing Page Scripts
  */
 
@@ -430,6 +430,6 @@ document.addEventListener('DOMContentLoaded', initLazyLoading);
 /**
  * Print friendly message in console
  */
-console.log('%c플라톤마케팅 홈페이지 제작 랜딩페이지', 'color: #2563eb; font-size: 20px; font-weight: bold;');
-console.log('%c병원의 마지막 마케팅 파트너', 'color: #64748b; font-size: 14px;');
+console.log('%c디자인피엘티 | 돈 되는 랜딩페이지 전문', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+console.log('%c팔리는 페이지를 만드는 전환율 파트너', 'color: #64748b; font-size: 14px;');
 console.log('%c문의: 0507-1434-3226', 'color: #10b981; font-size: 12px;');

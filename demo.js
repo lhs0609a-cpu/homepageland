@@ -1,5 +1,5 @@
 /**
- * 플라톤마케팅 멀티버전 홈페이지 데모
+ * 디자인피엘티 멀티버전 랜딩페이지 데모
  * Version Switcher Logic
  */
 
@@ -21,18 +21,18 @@ const VERSION_PRESETS = [
             shadowGlow: '0 0 40px rgba(37, 99, 235, 0.3)'
         },
         hero: {
-            badge: '20년 경력, 170개 병원 검증',
+            badge: '4년 경력, 170개 프로젝트 검증',
             badgeIcon: 'fas fa-shield-alt',
-            highlightLine: '170개 병의원이 선택한 이유',
+            highlightLine: '170개 프로젝트가 증명한 이유',
             mainLine: '<span class="gradient-text">검증된 전문성</span>이 만드는 차이',
-            subtitle: '4년간 병의원만 전문으로, 170개 이상의 성공 사례.<br><strong>94%가 3년 이상 장기계약</strong>을 유지하는 이유가 있습니다.<br><br><span class="hero-sub-highlight">"신뢰는 숫자로 증명됩니다"</span>',
+            subtitle: '전환율만 전문으로, 170개 이상의 성공 사례.<br><strong>94%가 3년 이상 장기계약</strong>을 유지하는 이유가 있습니다.<br><br><span class="hero-sub-highlight">"신뢰는 숫자로 증명됩니다"</span>',
             ctaPrimary: '무료 전환율 진단받기',
             ctaSecondary: '170개 성공 사례 보기',
-            trustItems: ['170+ 병의원 전문', '94% 장기계약', '4년 무사고']
+            trustItems: ['170+ 프로젝트 전문', '94% 장기계약', '4년 무사고']
         },
         cta: {
             urgencyText: '이번 달 무료 진단 혜택',
-            formHeader: '무료 진단 + 경쟁병원 분석',
+            formHeader: '무료 진단 + 경쟁사 분석',
             submitText: '무료 진단 신청하기'
         }
     },
@@ -57,14 +57,14 @@ const VERSION_PRESETS = [
             badgeIcon: 'fas fa-exclamation-triangle',
             highlightLine: '지금 이 순간에도',
             mainLine: '매달 <span class="gradient-text">156만원</span>이 새고 있습니다',
-            subtitle: '광고비 200만원 중 78%가 홈페이지 때문에 증발.<br><strong>연간 1,872만원의 보이지 않는 손실</strong>.<br><br><span class="hero-sub-highlight">"모르면 당하고, 알면 바꿉니다"</span>',
-            ctaPrimary: '내 병원 손실액 무료 진단',
+            subtitle: '광고비 200만원 중 78%가 잘못된 페이지 때문에 증발.<br><strong>연간 1,872만원의 보이지 않는 손실</strong>.<br><br><span class="hero-sub-highlight">"모르면 당하고, 알면 바꿉니다"</span>',
+            ctaPrimary: '내 비즈니스 손실액 무료 진단',
             ctaSecondary: '손실 계산기 보기',
             trustItems: ['월 156만원 손실 방지', '이탈률 78% → 22%', '연 1,872만원 절약']
         },
         cta: {
             urgencyText: '경고: 방치할수록 손실 증가',
-            formHeader: '내 병원 손실액 즉시 진단',
+            formHeader: '내 비즈니스 손실액 즉시 진단',
             submitText: '손실 진단 받기 (무료)'
         }
     },
@@ -89,10 +89,10 @@ const VERSION_PRESETS = [
             badgeIcon: 'fas fa-chart-line',
             highlightLine: '8개월 만에 월매출',
             mainLine: '<span class="gradient-text">6천에서 1억 4천</span>으로',
-            subtitle: '강남 A한의원, 폐업 위기 40평 → 120평 확장.<br>신환 <strong>5배</strong>, 문의 <strong>10배</strong>, 부원장 채용까지.<br><br><span class="hero-sub-highlight">"비결은 단 하나, 홈페이지였습니다"</span>',
-            ctaPrimary: '내 병원도 성과 만들기',
+            subtitle: 'A 브랜드, 성장 정체 → 매출 2.3배 달성.<br>신규 고객 <strong>5배</strong>, 문의 <strong>10배</strong>, 직원 충원까지.<br><br><span class="hero-sub-highlight">"비결은 단 하나, 랜딩페이지였습니다"</span>',
+            ctaPrimary: '내 비즈니스도 성과 만들기',
             ctaSecondary: '성과 데이터 전체 보기',
-            trustItems: ['월매출 1억4천 달성', '신환 5배 증가', '40평→120평 확장']
+            trustItems: ['월매출 1억4천 달성', '신규 고객 5배 증가', '매출 2.3배 성장']
         },
         cta: {
             urgencyText: '성과 보장 무료 컨설팅',
@@ -117,14 +117,14 @@ const VERSION_PRESETS = [
             shadowGlow: '0 0 40px rgba(234, 88, 12, 0.3)'
         },
         hero: {
-            badge: '원장님, 잠깐만요!',
+            badge: '잠깐만요!',
             badgeIcon: 'fas fa-hand-peace',
-            highlightLine: '원장님, 혹시 이런 고민 있으신가요?',
-            mainLine: '환자가 <span class="gradient-text">예약 버튼</span> 누르는 이유',
-            subtitle: '"왜 우리 병원 홈페이지는 예쁜데 환자가 안 올까?"<br><strong>그 답, 저희가 4년간 연구했습니다.</strong><br><br><span class="hero-sub-highlight">"커피 한 잔 하면서 편하게 이야기해요"</span>',
+            highlightLine: '혹시 이런 고민 있으신가요?',
+            mainLine: '고객이 <span class="gradient-text">전환 버튼</span> 누르는 이유',
+            subtitle: '"왜 우리 페이지는 예쁜데 고객이 안 올까?"<br><strong>그 답, 저희가 4년간 연구했습니다.</strong><br><br><span class="hero-sub-highlight">"커피 한 잔 하면서 편하게 이야기해요"</span>',
             ctaPrimary: '편하게 상담 신청하기',
             ctaSecondary: '어떤 이야기를 나눌까요?',
-            trustItems: ['부담 없는 무료 상담', '원장님 맞춤 제안', '강요 절대 없음']
+            trustItems: ['부담 없는 무료 상담', '맞춤 제안', '강요 절대 없음']
         },
         cta: {
             urgencyText: '부담 없는 무료 상담',
@@ -151,12 +151,12 @@ const VERSION_PRESETS = [
         hero: {
             badge: 'EXCLUSIVE MEDICAL BRANDING',
             badgeIcon: 'fas fa-crown',
-            highlightLine: '강남 TOP 병원들의 선택',
+            highlightLine: '강남 TOP 브랜드의 선택',
             mainLine: '<span class="gradient-text">프리미엄</span> 브랜딩의 차이',
-            subtitle: '단순한 홈페이지가 아닌, 브랜드 그 자체를 만듭니다.<br><strong>강남 상위 1% 병원</strong>이 신뢰하는 파트너.<br><br><span class="hero-sub-highlight">"프리미엄은 디테일에서 결정됩니다"</span>',
+            subtitle: '단순한 페이지가 아닌, 브랜드 그 자체를 만듭니다.<br><strong>상위 1% 브랜드</strong>가 신뢰하는 파트너.<br><br><span class="hero-sub-highlight">"프리미엄은 디테일에서 결정됩니다"</span>',
             ctaPrimary: 'VIP 컨설팅 예약하기',
             ctaSecondary: '프리미엄 포트폴리오 보기',
-            trustItems: ['강남 TOP 병원 파트너', '프리미엄 맞춤 브랜딩', '대표 직접 컨설팅']
+            trustItems: ['TOP 브랜드 파트너', '프리미엄 맞춤 브랜딩', '대표 직접 컨설팅']
         },
         cta: {
             urgencyText: 'VIP 전용 컨설팅',
@@ -185,7 +185,7 @@ const VERSION_PRESETS = [
             badgeIcon: 'fas fa-fire',
             highlightLine: '이번 달 무료 진단',
             mainLine: '<span class="gradient-text">3자리</span> 남았습니다',
-            subtitle: '매달 10건 한정, 무료 홈페이지 전환율 진단.<br><strong>이번 달 7건 마감, 잔여 3건.</strong><br><br><span class="hero-sub-highlight">"다음 달부터 유료(50만원) 전환 예정"</span>',
+            subtitle: '매달 10건 한정, 무료 랜딩페이지 전환율 진단.<br><strong>이번 달 7건 마감, 잔여 3건.</strong><br><br><span class="hero-sub-highlight">"다음 달부터 유료(50만원) 전환 예정"</span>',
             ctaPrimary: '지금 바로 자리 확보하기',
             ctaSecondary: '무료 진단 내용 보기',
             trustItems: ['이번 달 3자리 남음', '50만원 상당 무료', '선착순 마감']
