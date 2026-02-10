@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플라톤마케팅 | 멀티버전 홈페이지 데모</title>
+    <meta name="description" content="클릭 한 번으로 홈페이지 버전을 즉시 교체하는 멀티버전 홈페이지 데모. 플라톤마케팅의 살아있는 홈페이지를 경험해보세요.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body class="demo-mode">
+
+    <!-- 데모 상단 배너 -->
+    <div class="demo-banner">
+        <i class="fas fa-magic"></i>
+        <span>멀티버전 홈페이지 데모 &mdash; 왼쪽 패널에서 버전을 클릭하면 즉시 바뀝니다</span>
+    </div>
+
+    <!-- 버전 스위처 패널 -->
+    <div class="version-panel" id="versionPanel">
+        <button class="panel-toggle" id="panelToggle">
+            <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="panel-header">
+            <i class="fas fa-sync-alt"></i>
+            <h3>버전 교체</h3>
+        </div>
+        <div class="version-list" id="versionList">
+            <!-- JS로 채워짐 -->
+        </div>
+        <div class="panel-info">
+            <div class="info-row">
+                <span class="info-label">현재 전환율</span>
+                <span class="info-value" id="currentRate">3.2%</span>
+            </div>
+            <div class="recommendation" id="recommendation">
+                <span class="rec-label">추천:</span> 성과형 <span class="rec-star">&#11088;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <div id="mainContent">
+
+    <!-- 플로팅 CTA -->
+    <div class="floating-cta">
+        <a href="tel:0507-1434-3226" class="floating-btn phone">
+            <i class="fas fa-phone-alt"></i>
+            <span>전화상담</span>
+        </a>
+        <a href="#contact" class="floating-btn consult">
+            <i class="fas fa-comment-dots"></i>
+            <span>무료상담</span>
+        </a>
+    </div>
+
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">P</span>
+                <span class="logo-text">플라톤마케팅</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#problem">문제점</a></li>
+                <li><a href="#solution">솔루션</a></li>
+                <li><a href="#portfolio">포트폴리오</a></li>
+                <li><a href="#results">성과</a></li>
+                <li><a href="#process">진행과정</a></li>
+                <li><a href="#contact" class="nav-cta">무료 상담받기</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge urgency-badge">
+                <i class="fas fa-fire"></i>
+                <span>1월 무료 진단 잔여 3건</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="highlight-line">폐업 위기 40평 병원이</span>
+                <span class="main-line"><span class="gradient-text">8개월 만에 120평</span>으로 확장한 비밀</span>
+            </h1>
+            <p class="hero-subtitle">
+                강남 A한의원, 월 6천만원 → <strong>1억 4천만원</strong><br>
+                신환 5배, 문의 10배, 부원장 채용까지.<br><br>
+                <span class="hero-sub-highlight">"예약 버튼을 누르는 심리"를 4년간 연구했습니다.</span>
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="386">0</span>
+                    <span class="stat-unit">%</span>
+                    <span class="stat-label">평균 신환 증가</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="94">0</span>
+                    <span class="stat-unit">%</span>
+                    <span class="stat-label">3년 이상 장기계약</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="170">0</span>
+                    <span class="stat-unit">+</span>
+                    <span class="stat-label">병의원 전문 제작</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary pulse-animation">
+                    <span>내 병원 전환율 무료 진단받기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#portfolio" class="btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    <span>실제 성과 사례 보기</span>
+                </a>
+            </div>
+            <div class="hero-trust">
+                <span class="trust-text">실제 고객 성과</span>
+                <div class="trust-logos">
+                    <span class="trust-item"><i class="fas fa-check-circle"></i> 월매출 6천→1억4천</span>
+                    <span class="trust-item"><i class="fas fa-check-circle"></i> 신환 5배 증가</span>
+                    <span class="trust-item"><i class="fas fa-check-circle"></i> 40평→120평 확장</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="mockup-container">
+                <div class="mockup-desktop">
+                    <div class="mockup-screen">
+                        <div class="screen-content">
+                            <div class="fake-header"></div>
+                            <div class="fake-hero"></div>
+                            <div class="fake-cards">
+                                <div class="fake-card"></div>
+                                <div class="fake-card"></div>
+                                <div class="fake-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mockup-mobile">
+                    <div class="mockup-screen">
+                        <div class="screen-content">
+                            <div class="fake-header"></div>
+                            <div class="fake-hero"></div>
+                            <div class="fake-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-card card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>전환율 +287%</span>
+                    </div>
+                    <div class="float-card card-2">
+                        <i class="fas fa-user-plus"></i>
+                        <span>신환 유입 증가</span>
+                    </div>
+                    <div class="float-card card-3">
+                        <i class="fas fa-star"></i>
+                        <span>만족도 98%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>스크롤하여 더 알아보기</span>
+        </div>
+    </section>
+
+    <!-- 문제 제기 섹션 -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">PROBLEM</span>
+                <h2 class="section-title">
+                    광고비는 쓰는데<br>
+                    <span class="text-gradient">왜 환자가 안 올까요?</span>
+                </h2>
+                <p class="section-desc-alert">
+                    <i class="fas fa-exclamation-circle"></i>
+                    매달 광고비 200만원 중 <strong>156만원이 홈페이지 때문에 증발</strong>하고 있습니다.
+                </p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-up">
+                    <div class="problem-icon">
+                        <i class="fas fa-paint-brush"></i>
+                        <span class="icon-bg"></span>
+                    </div>
+                    <h3>예쁘기만 한 홈페이지</h3>
+                    <p>디자인은 좋은데 "왜 이 병원이어야 하는지" 설득력이 없습니다. 결국 <strong>가격 비교만 당하고</strong> 환자는 경쟁 병원으로 갑니다.</p>
+                    <div class="problem-stat">
+                        <span class="stat-bad">이탈률 78%</span>
+                        <span class="stat-money">→ 월 156만원 손실</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="icon-bg"></span>
+                    </div>
+                    <h3>모바일에서 깨지는 홈페이지</h3>
+                    <p>환자의 87%가 모바일로 검색합니다. PC에서만 예쁜 홈페이지? <strong>10명 중 8명이 보기도 전에 나갑니다.</strong></p>
+                    <div class="problem-stat">
+                        <span class="stat-bad">87% 모바일 검색</span>
+                        <span class="stat-money">→ 환자 8명 이탈</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">
+                        <i class="fas fa-route"></i>
+                        <span class="icon-bg"></span>
+                    </div>
+                    <h3>"예약하기" 버튼이 안 보임</h3>
+                    <p>정보만 나열하고 끝. 전환 동선 설계가 없으면 <strong>방문자 100명 중 99명이 그냥 나갑니다.</strong></p>
+                    <div class="problem-stat">
+                        <span class="stat-bad">전환율 0.3%</span>
+                        <span class="stat-money">→ 99% 이탈</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon">
+                        <i class="fas fa-search"></i>
+                        <span class="icon-bg"></span>
+                    </div>
+                    <h3>검색해도 안 나오는 병원</h3>
+                    <p>SEO 최적화 없는 홈페이지는 구글/네이버에서 <strong>존재하지 않는 것과 같습니다.</strong> 광고 끄면 끝입니다.</p>
+                    <div class="problem-stat">
+                        <span class="stat-bad">검색 유입 0건</span>
+                        <span class="stat-money">→ 광고 의존 100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="problem-summary">
+                <div class="summary-box loss-calculation">
+                    <div class="loss-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>원장님, 지금 얼마나 새고 있는지 계산해보셨나요?</h3>
+                    </div>
+                    <div class="loss-grid">
+                        <div class="loss-item">
+                            <span class="loss-label">이탈로 인한 월 손실</span>
+                            <span class="loss-value">156만원</span>
+                        </div>
+                        <div class="loss-item">
+                            <span class="loss-label">연간 누적 손실</span>
+                            <span class="loss-value highlight-red">1,872만원</span>
+                        </div>
+                    </div>
+                    <p class="loss-conclusion">
+                        <strong>홈페이지 리뉴얼 비용?</strong> 이 손실의 1/10도 안 됩니다.<br>
+                        <span class="highlight">"홈페이지 비용이 아깝다"가 아니라, "안 바꾸는 게 손해"입니다.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="problem-cta">
+                <a href="#contact" class="btn-primary">
+                    <span>내 병원은 얼마나 새고 있을까?</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <div class="urgency-banner">
+                        <span class="urgency-icon"><i class="fas fa-fire"></i></span>
+                        <span class="urgency-text">1월 한정 혜택</span>
+                    </div>
+                    <h2>무료 진단 + 경쟁병원 분석<br><span class="price-original">50만원 상당</span> → <span class="price-free">무료</span></h2>
+                    <div class="scarcity-counter">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>이번 달 무료 진단 잔여: </span>
+                        <strong class="scarcity-number">3건</strong>
+                        <span> / 10건</span>
+                    </div>
+                    <p class="urgency-note">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        다음 달부터 유료 전환 예정입니다.
+                    </p>
+                    <ul class="cta-benefits">
+                        <li><i class="fas fa-check-circle"></i> 현재 홈페이지 전환율 분석 <span class="benefit-value">(10만원)</span></li>
+                        <li><i class="fas fa-check-circle"></i> SEO 최적화 상태 점검 <span class="benefit-value">(10만원)</span></li>
+                        <li><i class="fas fa-check-circle"></i> <strong>경쟁 병원 홈페이지 비교 분석</strong> <span class="benefit-value">(20만원)</span></li>
+                        <li><i class="fas fa-check-circle"></i> 맞춤 개선 방향 + ROI 예측 <span class="benefit-value">(10만원)</span></li>
+                    </ul>
+                </div>
+                <div class="cta-form">
+                    <form id="consultForm">
+                        <div class="form-group">
+                            <label>병원명</label>
+                            <input type="text" name="hospital" placeholder="OO병원" required>
+                        </div>
+                        <div class="form-group">
+                            <label>원장님 성함</label>
+                            <input type="text" name="name" placeholder="홍길동" required>
+                        </div>
+                        <div class="form-group">
+                            <label>연락처</label>
+                            <input type="tel" name="phone" placeholder="010-0000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>현재 홈페이지 주소 (선택)</label>
+                            <input type="url" name="website" placeholder="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>상담 희망 내용</label>
+                            <select name="service" required>
+                                <option value="">선택해주세요</option>
+                                <option value="new">신규 홈페이지 제작</option>
+                                <option value="renewal">기존 홈페이지 리뉴얼</option>
+                                <option value="marketing">홈페이지 + 마케팅 통합</option>
+                                <option value="consult">일단 상담만</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit pulse-animation">
+                            <span>잔여 3건 중 1건 확보하기</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-shield-alt"></i>
+                            입력하신 정보는 100% 안전하게 보호됩니다. 스팸 문자 없음.
+                        </p>
+                        <p class="form-guarantee">
+                            <i class="fas fa-check-circle"></i>
+                            상담 후 마음에 안 드시면 거절하셔도 됩니다. 강요 없음.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon">P</span>
+                        <span class="logo-text">플라톤마케팅</span>
+                    </a>
+                    <p class="footer-slogan">"병원의 마지막 마케팅 파트너"</p>
+                    <div class="footer-contact">
+                        <a href="tel:0507-1434-3226" class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>0507-1434-3226</span>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>평일 08:00 ~ 18:00</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>서울특별시 양재동 257-10 4층</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>서비스</h4>
+                        <a href="#">멀티버전 홈페이지</a>
+                        <a href="#">블로그 마케팅</a>
+                        <a href="#">SNS 마케팅</a>
+                        <a href="#">영상 콘텐츠</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>회사</h4>
+                        <a href="https://brandplaton.com" target="_blank">공식 홈페이지</a>
+                        <a href="https://blog.naver.com/platonmarketing" target="_blank">공식 블로그</a>
+                        <a href="https://www.youtube.com/@well_platon" target="_blank">유튜브</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>고객지원</h4>
+                        <a href="#contact">상담 신청</a>
+                        <a href="index.html">메인 페이지</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 플라톤마케팅. All rights reserved.
+                </p>
+                <div class="footer-social">
+                    <a href="https://blog.naver.com/platonmarketing" target="_blank"><i class="fas fa-blog"></i></a>
+                    <a href="https://www.youtube.com/@well_platon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /mainContent -->
+
+    <script src="script.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>

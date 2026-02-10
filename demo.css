@@ -1,0 +1,322 @@
+/* ============================================
+   Version Switcher Panel - Demo Only
+   ============================================ */
+
+/* Panel Container */
+.version-panel {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+    width: 260px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 28px 24px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+}
+
+.version-panel.collapsed {
+    transform: translateY(-50%) translateX(-100%);
+}
+
+/* Panel Toggle Button */
+.panel-toggle {
+    position: absolute;
+    right: -44px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+}
+
+.panel-toggle:hover {
+    background: rgba(37, 99, 235, 0.8);
+}
+
+/* Panel Header */
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-header i {
+    font-size: 1.25rem;
+    color: #3b82f6;
+}
+
+.panel-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+/* Version List */
+.version-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+.version-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-align: left;
+    width: 100%;
+}
+
+.version-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.version-item.active {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: white;
+}
+
+/* Radio Indicator */
+.version-radio {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.version-item.active .version-radio {
+    border-color: #3b82f6;
+}
+
+.radio-dot {
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: block;
+}
+
+.version-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.version-star {
+    font-size: 0.9rem;
+}
+
+/* Panel Info */
+.panel-info {
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.recommendation {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(250, 204, 21, 0.1);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #fbbf24;
+    text-align: center;
+}
+
+.rec-label {
+    font-weight: 600;
+}
+
+.rec-star {
+    font-size: 0.85rem;
+}
+
+/* Demo Banner */
+.demo-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+    color: white;
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.demo-banner i {
+    font-size: 1.1rem;
+}
+
+.demo-banner a {
+    color: #fbbf24;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Adjust body for demo banner */
+body.demo-mode {
+    padding-top: 42px;
+}
+
+body.demo-mode .navbar {
+    top: 42px;
+}
+
+body.demo-mode .version-panel {
+    top: calc(50% + 21px);
+}
+
+/* Version Transition Animation */
+.version-transitioning {
+    opacity: 0;
+    transform: scale(0.99);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mainContent {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ============================================
+   Responsive - Mobile
+   ============================================ */
+@media (max-width: 1024px) {
+    .version-panel {
+        width: 240px;
+        padding: 20px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .version-panel {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: none;
+        border-radius: 16px 16px 0 0;
+        max-height: 70vh;
+        overflow-y: auto;
+        padding: 20px 20px 32px;
+    }
+
+    .version-panel.collapsed {
+        transform: translateY(calc(100% - 56px));
+    }
+
+    .panel-toggle {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        gap: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .panel-toggle::after {
+        content: '버전 패널 열기/닫기';
+        font-size: 0.85rem;
+        margin-left: 8px;
+    }
+
+    .version-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .version-item {
+        flex: 0 0 calc(50% - 4px);
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    body.demo-mode {
+        padding-bottom: 56px;
+    }
+
+    body.demo-mode .floating-cta {
+        bottom: 72px;
+    }
+
+    /* Demo banner adjustments */
+    .demo-banner {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    body.demo-mode {
+        padding-top: 38px;
+    }
+
+    body.demo-mode .navbar {
+        top: 38px;
+    }
+}
